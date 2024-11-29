@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Music Player Info</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body id="infoPage">
+    <div id="overlay"></div>
+
+    <div class="content">
+        <div id="standardSidebar">
+            <div class="sidebar">
+                <div class="buttons">
+                    <i class="fa fa-headphones" onclick="location.href='music.html'"></i>
+                    <hr class="rounded">
+                    <i class="fa fa-home active"></i>
+                    <i class="fa fa-list" id="playlistButton"></i>
+                    <i class="fa fa-link" onclick="location.href='links.html'"></i>
+                </div>
+            </div>
+            <div class="sidebar playlist" id="playlistfixed">
+                <div class="mp3-list">
+                    <h3>Playlist:</h3>
+                    <ul id="playlistContent"></ul>
+                </div>
+                <i class="fa fa-close" id="playlistClose"></i>
+            </div>
+        </div>
+
+        <div class="mainContent">
+            <h1>About the Music Player</h1>
+            <div class="articlesContainer">
+                <article class="infoCard">
+                    <h2>Features</h2>
+                    <p>
+                        The music player offers a variety of features:
+                    </p>
+                    <ul>
+                        <li>Customizable playlist navigation.</li>
+                        <li>Real-time progress tracking.</li>
+                        <li>Stylish spinning record animation.</li>
+                        <li>Responsive design for mobile and desktop.</li>
+                    </ul>
+                </article>
+
+                <article class="infoCard">
+                    <h2>How It Works</h2>
+                    <p>
+                        The player uses modern web technologies:
+                    </p>
+                    <ul>
+                        <li>HTML for structure.</li>
+                        <li>CSS for design and animations.</li>
+                        <li>JavaScript for interactivity and playback control.</li>
+                        <li>Font Awesome for stylish icons.</li>
+                    </ul>
+                </article>
+
+                <article class="infoCard">
+                    <h2>Technologies Used</h2>
+                    <p>
+                        Built using a combination of:
+                    </p>
+                    <ul>
+                        <li>HTML5 Audio API.</li>
+                        <li>CSS3 for advanced styling.</li>
+                        <li>JavaScript for dynamic behavior.</li>
+                        <li>Font Awesome for icons.</li>
+                    </ul>
+                </article>
+
+                <article class="infoCard">
+                    <h2>Future Improvements</h2>
+                    <p>
+                        Potential enhancements include:
+                    </p>
+                    <ul>
+                        <li>User authentication for personalized playlists.</li>
+                        <li>Integration with music streaming services.</li>
+                        <li>Drag-and-drop playlist editing.</li>
+                        <li>Enhanced metadata display.</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </div>
+    <script src="playlist.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+    <div id="overlay"></div>
+    <svg class='hideSvgSoThatItSupportsFirefox'>
+        <filter id='sharpBlur'>
+            <feGaussianBlur stdDeviation='5'></feGaussianBlur>
+            <feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0'></feColorMatrix>
+            <feComposite in2='SourceGraphic' operator='in'></feComposite>
+        </filter>
+    </svg>
+
+    <div class="content">
+        <div id="standardSidebar">
+            <div class="sidebar">
+                <div class="buttons">
+                    <i class="fa fa-headphones active"></i>
+                    <hr class="rounded">
+                    <i class="fa fa-home" onclick="location.href='index.html'"></i>
+                    <i class="fa fa-list" id="playlistButton"></i>
+                    <i class="fa fa-link" onclick="location.href='links.html'"></i>
+                </div>
+                <div class="sidebar playlist" id="playlist">
+                    <div class="mp3-list">
+                        <h3>Playlist:</h3>
+                        <ul id="playlistContent"></ul>
+                    </div>
+                    <i class="fa fa-close" id="playlistClose"></i>
+                </div>
+            </div>
+        </div>
+        <div class="trackContent">
+            <div class="cover">
+
+                <div class='record'>
+                    <div class="imageContainer">
+                        <span class="recordLabel" id="albumName">Example album
+                            name</span>
+                        <span class="recordLabel" id="artistName">by Example artist</span>
+                        <div class="recordLabel" id="labelSticker"></div>
+                        <img id="coverImage" src="ben-wicks-uGVuJNhhuuo-unsplash.jpg" alt="Album cover">
+                    </div>
+                </div>
+            </div>
+            <div class="player">
+                <audio id="audioPlayer" preload="metadata" ontimeupdate="updateTrackTime()">
+                    <source id="audioSource" src="" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="info">
+                    <span id="trackName"></span>
+                    <span id="artistName"></span>
+                </div>
+                <div class="bar">
+                    <span id="currentTime" class="time">00:00</span>
+                    <div class="progressBar">
+                        <progress id="progressbar">
+                        </progress>
+                        <div class="playhead" id="playhead"></div>
+                    </div>
+                    <span id="duration" class="time">00:00</span>
+                </div>
+                <div class="controls">
+                    <i id="shuffleBtn" class="fa fa-random"></i>
+                    <i id="prevBtn" class="fa fa-fast-backward"></i>
+                    <i id="playPauseBtn" class="fa fa-play"></i>
+                    <i id="nextBtn" class="fa fa-fast-forward"></i>
+                    <i id="loopBtn" class="fa fa-repeat"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="control.js"></script>
+</body>
+
+</html>

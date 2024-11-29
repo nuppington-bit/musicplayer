@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Music Player Info</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body id="infoPage">
+    <div id="overlay"></div>
+
+    <div class="content">
+        <div id="standardSidebar">
+            <div class="sidebar">
+                <div class="buttons">
+                    <i class="fa fa-headphones" onclick="location.href='music.html'"></i>
+                    <hr class="rounded">
+                    <i class="fa fa-home" onclick="location.href='index.html'"></i>
+                    <i class="fa fa-list" id="playlistButton"></i>
+                    <i class="fa fa-link active"></i>
+                </div>
+            </div>
+            <div class="sidebar playlist" id="playlistfixed">
+                <div class="mp3-list">
+                    <h3>Playlist:</h3>
+                    <ul id="playlistContent"></ul>
+                </div>
+                <i class="fa fa-close" id="playlistClose"></i>
+            </div>
+        </div>
+
+        <div class="mainContent">
+            <h1>Resources used:</h1>
+            <div class="articlesContainer">
+                <article class="infoCard">
+                    <h2>Example tracks from <a href="https://www.soundhelix.com/audio-examples">SoundHelix</a>:</h2>
+                    <ul>
+                        <li>SoundHelix Song 1 by T. Schürger</li>
+                        <li>SoundHelix Song 2 by T. Schürger</li>
+                        <li>SoundHelix Song 3 by T. Schürger</li>
+                    </ul>
+                </article>
+
+                <article class="infoCard">
+                    <h2>StackOverflow code used:</h2>
+                    <ul>
+                        <li><a href="https://stackoverflow.com/a/32804559">Progress bar seeking code</a> by user Daniel
+                            Lizik
+                        </li>
+                        <li><a
+                                href="https://stackoverflow.com/questions/1322732/convert-seconds-to-hh-mm-ss-with-javascript#comment57297644_25279340">Seconds
+                                to HH:MM:SS code</a> by user Frank</li>
+                    </ul>
+                </article>
+
+                <article class="infoCard">
+                    <h2>Icon credits:</h2>
+                    <ul>
+                        <li><a href="https://fontawesome.com/v4/icons/">Font Awesome 4</a> for icons.</li>
+                    </ul>
+                </article>
+
+                <article class="infoCard">
+                    <h2>Blur effect:</h2>
+                    <ul>
+                        <li><a href="https://stackoverflow.com/a/48095387">SVG blur effect</a> by user nmu</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </div>
+    <script src="playlist.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
