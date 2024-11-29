@@ -420,6 +420,12 @@ audio {
     max-height: 100vh;
     max-width: 100%;
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.mainContent::-webkit-scrollbar {
+    display: none;
 }
 
 .mainContent h1 {
@@ -436,6 +442,12 @@ audio {
     align-items: stretch;
     max-width: 100%;
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.articlesContainer::-webkit-scrollbar {
+    display: none;
 }
 
 hr.rounded {
