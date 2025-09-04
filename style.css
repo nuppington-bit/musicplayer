@@ -27,7 +27,6 @@ body {
 
 /* Content Layout */
 .content {
-    /*margin-left: 100px;*/
     display: flex;
     flex-direction: row;
     width: 100vw;
@@ -40,7 +39,6 @@ body {
 /* Sidebar Styling */
 #standardSidebar {
     display: flex;
-
     justify-content: flex-start;
     left: 0;
     top: 0;
@@ -179,7 +177,6 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 999;
-    /* Behind the playlist */
 }
 
 #overlay.show {
@@ -190,7 +187,6 @@ body {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-
     .sidebar i {
         font-size: 30px;
     }
@@ -518,3 +514,4 @@ hr.rounded {
         grid-template-columns: 1fr;
     }
 }
+
